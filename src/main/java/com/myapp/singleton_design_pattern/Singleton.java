@@ -7,8 +7,14 @@ public class Singleton {
     private Singleton() {
     }
 
+    public void clearObject(){
+        Singleton.obj = null;
+    }
+
+
     public static Singleton getInstance(){
         if(obj == null){
+            System.out.println("Object doesn't exist --- New object being created");
             //making singleton object thread safe.
             synchronized(Singleton.class){
                 if(obj==null){
@@ -16,6 +22,7 @@ public class Singleton {
                 }
             }
         }
+        System.out.println("Object already created --- already created object will be returned, No new object will be created.");
         return obj;
     }
 
