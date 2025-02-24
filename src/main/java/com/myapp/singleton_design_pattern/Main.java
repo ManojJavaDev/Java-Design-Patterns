@@ -14,7 +14,7 @@ public class Main {
 
         //Let's try to clear the object and access again.
         Singleton.getInstance().clearObject();
-        //Object got clearend and new object is being created.
+        //Object got cleared and new object is being created.
         Singleton.getInstance();
 
 
